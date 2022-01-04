@@ -1,0 +1,65 @@
+#ISINP
+------------------------------------------------------------------------
+--- this is the new input file used by iSALE versions of v7.0 and higher
+------------------- General Model Info ---------------------------------
+VERSION               __DO NOT MODIFY__             : 4.1
+DIMENSION             dimension of input file       : 2
+PATH                  Data file path                : ./
+MODEL                 Modelname                     : 20cppr
+TDUMP                 Dump save interval            : 2.0D-4
+DUMP                  Restart with dump             : 40cppr/restart.dump
+REGRID                Regridding                    : 1
+NEWCELLH              New cells (hor)               : 0        : 400
+NEWCELLV              New cells (vert)              : 300      : 0
+------------------- Mesh Geometry Parameters ---------------------------
+GRIDH                 horizontal cells              : 0           : 2000        : 0
+GRIDV                 vertical cells                : 0           : 2400        : 0
+GRIDSPC               grid spacing                  : 20.2342D-03   
+CYL                   Cylind. geometry              : 1.0D0
+------------------- Global setup parameters -----------------------------
+S_TYPE                setup type                    : DEFAULT
+T_SURF                Surface temp                  : 293.D0
+GRAD_TYPE             Lithostatic gradient          : DEFAULT
+LP_TOLER              Pressure tolerance            : 1.D-2
+GRAV_V                Gravitational acceleration    : -5D-5
+------------------- Projectile ("Object") Parameters --------------------
+OBJNUM                number of objects             : 2
+OBJRESH               CPPR horizontal               : 80        : 60              
+OBJRESV               CPPR vertical                 : 80        : 60         
+OBJVEL                object velocity               : -6.5D3    : -6.5D3       
+OBJMAT                object material               : impactr   : VOID___
+OBJOFF_V              object offset                 : 0         : 20 
+OBJTYPE               object type                   : CUBOID    : CUBOID                    
+------------------- Target Parameters ----------------------------------
+LAYNUM                layers number                 : 1
+LAYPOS                layer position                : 1760
+LAYMAT                layer material                : target_
+EJECT_V               ejecta elevation              : 0.607
+------------------- Time Parameters ------------------------------------
+DT                    initial time increment        : 1.0D-4
+DTMAX                 maximum timestep              : 1.D-3
+TEND                  end time                      : 5.0D-3
+DTSAVE                save interval                 : 1.0D-4
+------------------- Boundary Condition Parameters ----------------------
+BND_L                 left                          : FREESLIP
+BND_R                 right                         : FREESLIP
+BND_B                 bottom                        : NOSLIP
+BND_T                 top                           : OUTFLOW
+------------------- Numerical Stability Parameters ---------------------
+AVIS                  art. visc. linear             : 0.2D0
+AVIS2                 art. visc. quad.              : 1.0D0
+------------------- Tracer Particle Parameters -------------------------
+TR_QUAL               quality                       : 1
+TR_SPCH               tracer spacing X              : -1.5       : -1.5       
+TR_SPCV               tracer spacing Y              : -1.5       : -1.5       
+TR_VAR                add. tracer fiels             : #TrP-TrT-TrA-TrV-TrB-TrM#
+------------------- (Material) Model parameters (global) ---------------
+STRESS                Consider stress               : 1
+PARTPRES              Pres. in part.                : 0
+ADVECT                Advect by mass or volume      : 1
+VEL_CUT               Velocity cutoff               : -4.D0 
+------------------- Data Saving Parameters -----------------------------
+QUALITY               Compression rate              : -50
+VARLIST               List of variables             : #Den-Tmp-Pre-VEL-Sie-Yld-VEL#
+------------------------------------------------------------------------
+<<END
